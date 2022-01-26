@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+
+  sagi-web:
+    build:
+      context: .
+    container_name: sagi-web
+    tty: true
+    ports:
+      - "8080:80"

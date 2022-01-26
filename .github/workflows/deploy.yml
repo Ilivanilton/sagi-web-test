@@ -17,4 +17,5 @@ jobs:
           script: |
             cd /opt/fundepes/sagi-web
             sudo git pull
-            sudo ng serve
+            sudo docker-compose -f docker-compose.yaml up -d
+            sudo docker-compose -f docker-compose.yaml restart
