@@ -1,0 +1,20 @@
+name: CID
+on: push
+jobs:
+  deploy:
+    #needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.FUNDEPES_HOST }}
+          port: ${{ secrets.FUNDEPES_PORT }}
+          username: ${{ secrets.FUNDEPES_USERNAME }}
+          password: ${{ secrets.FUNDEPES_PASS }}
+          script: |
+            cd /opt/fundepes/sagi-web
+            sudo git pull
+            sudo ng serve
