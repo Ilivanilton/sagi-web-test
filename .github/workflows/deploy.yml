@@ -18,4 +18,3 @@ jobs:
             cd /opt/fundepes/sagi-web
             sudo git pull --rebase
             sudo docker-compose -f docker-compose.yaml up -d --build
-            sudo docker-compose -f docker-compose.yaml restart
