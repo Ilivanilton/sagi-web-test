@@ -17,4 +17,5 @@ jobs:
           script: |
             cd /opt/fundepes/sagi-web
             sudo git pull --rebase
-            sudo docker-compose -f docker-compose.yaml up -d --build
+            sudo docker-compose down --remove-orphans
+            sudo docker-compose up -d --force-recreate
