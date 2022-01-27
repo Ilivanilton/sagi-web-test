@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "start:ci": "ng serve --port 80 --watch false --live-reload false --host 0.0.0.0 --poll 1",
+    "start:ci": "ng serve --port 8080 --watch false --live-reload false --host 0.0.0.0 --poll 1",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
